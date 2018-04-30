@@ -1,27 +1,43 @@
-#include "BIS_AddonInfo.hpp"
 class CfgPatches
 {
 	class weapon_holster_maximili
 	{
 		units[]={};
 		weapons[]={};
-		requiredAddons[]={};
+		requiredAddons[]={"A3_Characters_F"};
 		author[]=
 		{
 			"MAXIMILI"
 		};
 	};
 };
+
 class CfgFunctions
 {
-	class maximili
+	class MXML
 	{
-		class maximili_mods
+		tag = "MXML";
+		class Misc
 		{
-			class maximili_mods_weapon_holster
+			class WeaponHolster
 			{
-				file="\w_h\init.sqf";
-				postInit=1;
+				file = "\w_h\fnc\fn_WeaponHolster.sqf";
+			};
+		};
+	};
+};
+
+class CfgVehicles
+{
+	class Land;
+	class Man: Land {};
+	class CAManBase: Man
+	{
+		class EventHandlers
+		{
+			class MXML_WeaponHolsterOnUnit
+			{
+				init = "[this] spawn MXML_fnc_WeaponHolster";
 			};
 		};
 	};
