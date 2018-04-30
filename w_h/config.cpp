@@ -17,7 +17,7 @@ class CfgFunctions
 	class MXML
 	{
 		tag = "MXML";
-		class Misc
+		class Actions
 		{
 			class WeaponHolster
 			{
