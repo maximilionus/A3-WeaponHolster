@@ -1,3 +1,4 @@
+//This init is used by older version of mod. -- DONT INCLUDE IT IN FINAL BUILD!!!
 if (isDedicated) exitWith {};
 if !(hasinterface) exitwith {};
 private["_keyDown"];
