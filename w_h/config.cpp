@@ -21,7 +21,7 @@ class CfgFunctions
 		{
 			class WeaponHolster
 			{
-				file = "\w_h\fnc\fn_WeaponHolster.sqf";
+				file = "WeaponHolster\w_h\fnc\fn_WeaponHolster.sqf";
 			};
 		};
 	};
