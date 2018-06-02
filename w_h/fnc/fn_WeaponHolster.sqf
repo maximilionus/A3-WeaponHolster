@@ -13,12 +13,11 @@
 
 /////////////////////
 private["_getActionStatus"];
-mxml_wh_cfgGetCurrentUser = _this;
 /////////////////////
 mxml_wh_HActionEx = {
 	_getActionStatus = inputAction "User18";
 	if (_getActionStatus>0) then {
-		mxml_wh_cfgGetCurrentUser action ["SwitchWeapon", mxml_wh_cfgGetCurrentUser, mxml_wh_cfgGetCurrentUser, -1];
+		player action ["SwitchWeapon", player, player, -1];
 	};
 };
 
