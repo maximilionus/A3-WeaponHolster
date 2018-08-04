@@ -40,7 +40,7 @@ class CfgVehicles
 		{
 			class MXML_WeaponHolsterOnUnit
 			{
-				init = "(_this select 0) call wpnhr_fnc__weaponHolster";
+				init = "(_this select 0) execVM 'WeaponHolster\w_h\fn\fn_WeaponHolster.sqf'";
 			};
 		};
 	};
