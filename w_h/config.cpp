@@ -4,7 +4,7 @@ class CfgPatches
 	{
 		units[]={};
 		weapons[]={};
-		requiredAddons[]={"A3_Characters_F"};
+		requiredAddons[]={};
 		author[]=
 		{
 			"MAXIMILI"
@@ -40,7 +40,7 @@ class CfgVehicles
 		{
 			class MXML_WeaponHolsterOnUnit
 			{
-				init = "(_this select 0) execVM 'WeaponHolster\w_h\fn\fn_WeaponHolster.sqf'";
+				init = "private _whActRun = compile format ['(findDisplay 46) displayAddEventHandler [''KeyDown'', ''[%1] execVM '''WeaponHolster\w_h\fn\fn_WHCalled.sqf''''']', (_this select 0)];";
 			};
 		};
 	};
