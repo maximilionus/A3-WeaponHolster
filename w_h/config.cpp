@@ -14,14 +14,17 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class MXML
+	class WpnHr
 	{
-		tag = "MXML";
 		class Actions
 		{
-			class WeaponHolster
+			class _weaponHolster
 			{
-				file = "WeaponHolster\w_h\fnc\fn_WeaponHolster.sqf";
+				file = "WeaponHolster\w_h\fn\fn_WeaponHolster.sqf";
+			};
+			class _WHCalled
+			{
+				file = "WeaponHolster\w_h\fn\fn_WHCalled.sqf";
 			};
 		};
 	};
@@ -37,7 +40,7 @@ class CfgVehicles
 		{
 			class MXML_WeaponHolsterOnUnit
 			{
-				init = "execVM ""WeaponHolster\w_h\fnc\fn_WeaponHolster.sqf""";
+				init = "(_this select 0) call wpnhr_fnc__weaponHolster";
 			};
 		};
 	};
