@@ -8,14 +8,10 @@
 	NOTHING
 */
 
-
-systemchat str _this; //Debug
-
-private _whact = format ["(findDisplay 46) displayAddEventHandler ['KeyDown', '[%1] call WpnHr_fnc__WHCalled']", _this];
-
-systemchat format ["_whact = %1 \n", _whact];
-
-compile _whact;
+_wpnHr = [] spawn {
+waitUntil {!(IsNull (findDisplay 46))};
+(findDisplay 46) displayAddEventHandler ["KeyDown", "private ['_getActionStatus', '_unitIn']; _unitIn = player; _getActionStatus = inputAction 'User18'; if (_getActionStatus > 0) then {_unitIn action ['SwitchWeapon', _unitIn, _unitIn, -1];};"];
+};
 
 /*
 /////////////////////

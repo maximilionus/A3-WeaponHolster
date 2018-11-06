@@ -22,10 +22,12 @@ class CfgFunctions
 			{
 				file = "WeaponHolster\w_h\fn\fn_WeaponHolster.sqf";
 			};
+/*
 			class _WHCalled
 			{
 				file = "WeaponHolster\w_h\fn\fn_WHCalled.sqf";
 			};
+*/
 		};
 	};
 };
@@ -40,7 +42,7 @@ class CfgVehicles
 		{
 			class MXML_WeaponHolsterOnUnit
 			{
-				init = "private _whActRun = compile format ['(findDisplay 46) displayAddEventHandler [''KeyDown'', ''[%1] execVM '''WeaponHolster\w_h\fn\fn_WHCalled.sqf''''']', (_this select 0)];";
+				init = "call wpnhr_fnc_weaponHolster;“;
 			};
 		};
 	};
