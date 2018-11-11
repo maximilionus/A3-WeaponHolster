@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class weapon_holster_maximili
+	class weapon_holster_core
 	{
 		units[]={};
 		weapons[]={};
@@ -18,16 +18,7 @@ class CfgFunctions
 	{
 		class Actions
 		{
-			class _weaponHolster
-			{
-				file = "WeaponHolster\w_h\fn\fn_WeaponHolster.sqf";
-			};
-/*
-			class _WHCalled
-			{
-				file = "WeaponHolster\w_h\fn\fn_WHCalled.sqf";
-			};
-*/
+			class _weaponHolster_core {file = "WeaponHolster\fn\fn_weaponHolster_core.sqf";};
 		};
 	};
 };
@@ -42,7 +33,7 @@ class CfgVehicles
 		{
 			class MXML_WeaponHolsterOnUnit
 			{
-				init = "call wpnhr_fnc_weaponHolster;“;
+				init = "[] call wpnhr_fnc__weaponHolster_core;";
 			};
 		};
 	};
